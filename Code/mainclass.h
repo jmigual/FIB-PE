@@ -23,9 +23,6 @@ public:
     /// Default destructor
     ~MainClass();
     
-    /// Main loop
-    void start();
-    
 signals:
     void downloaded(QString);
     
@@ -34,6 +31,9 @@ private:
     /// Network controler
     QNetworkAccessManager *_acc;
     
+    /// Contains the PC information data
+    QJsonObject _dataPC;
+    
     /// To view if an error occurred
     QNetworkReply *_rep;
     
@@ -41,7 +41,7 @@ private:
     QNetworkRequest _req;
     
     /// Time to sleep
-    static const unsigned int _time = 60*15;
+    static const unsigned int _time = 6000;
     
     /// Contains the url
     const QString _url = "https://raco.fib.upc.edu/api/aules/places-lliures.json";
@@ -49,7 +49,7 @@ private:
     void lectura();
     
 private slots:
-    void download();
+    void timerEvent(QTimerEvent *);
     
     void downloaded(QNetworkReply *rep);
     

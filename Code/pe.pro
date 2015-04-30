@@ -50,12 +50,14 @@ win32 {
 Release {
     OTHER_FILES += \
         Libraries/OpenSSl/libeay32.dll \
-        Libraries/OpenSSl/libssl32.dll
+        Libraries/OpenSSl/libssl32.dll \
+        Libraries/OpenSSL/ssleay32.dll
 }
 Debug {
     OTHER_FILES += \
-        Libraries/OpenSSl/libeay32.dll \
-        Libraries/OpenSSl/libssl32.dll
+        Libraries/OpenSSL/libeay32.dll \
+        Libraries/OpenSSL/libssl32.dll \
+        Libraries/OpenSSL/ssleay32.dll
 }
 }
 
