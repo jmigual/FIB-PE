@@ -1,5 +1,6 @@
 #include <QCoreApplication>
 #include <QThread>
+#include <QtNetwork>
 #include <QUrl>
 
 #define MINTUS  15          // 15 minuts
