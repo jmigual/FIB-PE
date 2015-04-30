@@ -1,24 +1,23 @@
 #include <QCoreApplication>
 #include <QThread>
-#include <QtNetwork>
-#include <QUrl>
 
 #define MINTUS  15          // 15 minuts
 #define TEMPS   MINUTS*60   // passem a segons
 
+
 void lectura()
 {
-    QUrl("https://raco.fib.upc.edu/api/aules/places-lliures.json");
-    
+    QUrl url("https://raco.fib.upc.edu/api/aules/places-lliures.json");
+    QNetworkRequest req(url);
     
 }
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    
+    QObject::connect();
     while(1) {
-        lectura();
+        
         
         // Esperem un cert temps
         QThread::sleep(TEMPS);
