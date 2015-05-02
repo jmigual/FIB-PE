@@ -18,7 +18,7 @@ class MainClass : QObject
 public:
     
     /// Default constructor
-    MainClass();
+    MainClass(int argc, char *argv[]);
     
     /// Default destructor
     ~MainClass();
@@ -33,6 +33,12 @@ private:
     
     /// Contains the PC information data
     QJsonObject _dataPC;
+
+    /// Contains the file path to the downloaded data
+    QString _fileD;
+
+    /// Contains the file path to write the data
+    QString _fileW;
     
     /// To view if an error occurred
     QNetworkReply *_rep;
