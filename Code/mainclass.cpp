@@ -43,7 +43,9 @@ void MainClass::downloaded(QNetworkReply *rep)
     rep->deleteLater();
     
     QJsonDocument json(QJsonDocument::fromJson(data));
-    qDebug() << _dataPC;
+    QFile dFile(_fileD);
+    if (!dFile.open()) cerr << "Error opening downloads file" << endl;
+    
 }
 
 void MainClass::error(QNetworkReply::NetworkError code)
