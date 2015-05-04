@@ -47,7 +47,7 @@ private:
     QNetworkRequest _req;
     
     /// Time to sleep
-    static const unsigned int _time = 6000;
+    static const unsigned int _time = 6*1000; // 6 s
     
     /// Contains the url
     const QString _url = "https://raco.fib.upc.edu/api/aules/places-lliures.json";

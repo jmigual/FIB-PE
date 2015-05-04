@@ -51,6 +51,4 @@ void MainClass::downloaded(QNetworkReply *rep)
 void MainClass::error(QNetworkReply::NetworkError code)
 {
     cerr << "Error code: " << code << endl;
-    
-    // Hola he afegit un canvi
 }
