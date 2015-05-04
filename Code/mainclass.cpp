@@ -44,13 +44,15 @@ void MainClass::downloaded(QNetworkReply *rep)
     
     QJsonDocument json(QJsonDocument::fromJson(data));
     QFile dFile(_fileD);
-    if (!dFile.open()) cerr << "Error opening downloads file" << endl;
+    
+    if (!dFile.open(QIODevice::Append)) 
+        cerr << "Error opening downloads file" << endl;
+    
+    dFile.write(json.toBinaryData());
     
 }
 
 void MainClass::error(QNetworkReply::NetworkError code)
 {
     cerr << "Error code: " << code << endl;
-    
-    // Hola he afegit un canvi
 }
