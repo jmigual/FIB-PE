@@ -17,6 +17,7 @@ MainClass::MainClass(int argc, char *argv[]) :
             this, SLOT(downloaded(QNetworkReply*)));
     
     QTime day(QTime::currentTime());
+    _timer.setTimerType(Qt::VeryCoarseTimer);
     _timer.setInterval(_timeD + day.msecsTo(QTime(7, 58, 00)));
     connect(&_timer, SIGNAL(timeout()), this, SLOT(dayUpdate()));
     _timer.start();
@@ -98,7 +99,7 @@ void MainClass::downloaded(QNetworkReply *rep)
         file.open(QIODevice::Append);
         QTextStream out(&file);
         out << hora << " " << arr.size() - 1 << endl;
-        cout << hora << " " << arr.size() - 1 << " ";
+        cout << hora.toStdString() << " " << arr.size() - 1 << endl;
         QDateTime date(QDateTime::fromString(hora, "dd/MM/yyyy hh:mm:ss"));
         int h =  date.time().hour();
         
@@ -113,7 +114,7 @@ void MainClass::downloaded(QNetworkReply *rep)
     } 
     else {
         QString aula = rep->url().query().remove(0, 3);
-        cout << aula << endl;
+        cout << aula.toStdString() << endl;
         QTextStream text(&data);
         text.readLine();
         QString hora = text.readLine();
