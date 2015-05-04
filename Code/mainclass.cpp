@@ -8,16 +8,19 @@ MainClass::MainClass(int argc, char *argv[]) :
 {
 
     for (int i = 0; i < argc; ++i) qDebug() << argv[i];
-
-
+    
+    for (QString &s : _className) _classe.insert(s, QVector<bool>(13, false));
+    
     // Download configuration
     _req.setUrl(QUrl(_url));
     connect(_acc, SIGNAL(finished(QNetworkReply*)),
             this, SLOT(downloaded(QNetworkReply*)));
     
-    // Timer event configuration
-    this->startTimer(_time);
-    timerEvent(NULL);
+    QTime day(QTime::currentTime());
+    _timer.setInterval(_timeD + day.msecsTo(QTime(7, 45, 00)));
+    connect(&_timer, SIGNAL(timeout()), this, SLOT(dayUpdate()));
+    _timer.start();
+    this->dayUpdate();
 }
 
 MainClass::~MainClass()
@@ -25,12 +28,45 @@ MainClass::~MainClass()
     delete _acc;
 }
 
-void MainClass::timerEvent(QTimerEvent *)
+void MainClass::timerEvent(QTimerEvent *event)
 {
+    QTime t(QTime::currentTime());
+    if (t > QTime(21, 0, 5) && event != NULL) {
+        this->killTimer(event->timerId());
+    }
+    
     cout << "Downloading" << endl;
     _rep =_acc->get(_req);
     connect(_rep, SIGNAL(error(QNetworkReply::NetworkError)),
             this, SLOT(error(QNetworkReply::NetworkError)));
+    
+    qDebug() << _classe;
+}
+
+void MainClass::dayUpdate()
+{
+    _timer.stop();
+    _timer.setInterval(_timeD);
+    _timer.start();
+    
+    
+    for (QVector< bool > &V : _classe) for (bool &b : V) b = false;
+    
+    
+    for (const QString &s : _className) {
+        QUrl url("https://raco.fib.upc.edu/api/aules/disponibilitat-pc.txt");
+        QUrlQuery query;
+        query.addQueryItem("pc", s);
+        url.setQuery(query);
+        QNetworkRequest req(url);
+        
+        _rep = _acc->get(req);
+        connect(_rep, SIGNAL(error(QNetworkReply::NetworkError)),
+                this, SLOT(error(QNetworkReply::NetworkError)));
+    }
+    
+    // Attack timer enable
+    this->startTimer(_time);
 }
 
 
@@ -42,14 +78,33 @@ void MainClass::downloaded(QNetworkReply *rep)
     rep->disconnect();
     rep->deleteLater();
     
-    QJsonDocument json(QJsonDocument::fromJson(data));
-    QFile dFile(_fileD);
     
-    if (!dFile.open(QIODevice::Append)) 
-        cerr << "Error opening downloads file" << endl;
-    
-    dFile.write(json.toBinaryData());
-    
+    if (rep->url() == QUrl(_url)) {
+        QJsonDocument jsonD(QJsonDocument::fromJson(data));
+        QFile dFile(_fileD);
+        
+        if (!dFile.open(QIODevice::Append)) 
+            cerr << "Error opening downloads file" << endl;
+        
+        dFile.write(jsonD.toJson(QJsonDocument::Compact));
+        dFile.write("\n\n");
+    } 
+    else {
+        QString aula = rep->url().query().remove(0, 3);
+        qDebug() << aula;
+        QTextStream text(&data);
+        text.readLine();
+        QString hora = text.readLine();
+        while (not text.atEnd()) {
+            hora.truncate(2);
+            unsigned int h = hora.toInt();
+            
+            Q_ASSERT(h >= 8 && h <= 21);
+            _classe[aula][h - 8] = true;
+            
+            hora = text.readLine();            
+        }
+    }
 }
 
 void MainClass::error(QNetworkReply::NetworkError code)
