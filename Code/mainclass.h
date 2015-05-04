@@ -58,7 +58,7 @@ private:
     QNetworkRequest _req;
     
     /// Time to sleep
-    static const unsigned int _time = 6000;
+    static const unsigned int _time = 6*1000; // 6 s
     
     /// Timer for every day update
     QTimer _timer;
