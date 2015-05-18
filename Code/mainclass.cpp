@@ -15,12 +15,10 @@ MainClass::MainClass(int argc, char *argv[]) :
     _req.setUrl(QUrl(_url));
     connect(_acc, SIGNAL(finished(QNetworkReply*)),
             this, SLOT(downloaded(QNetworkReply*)));
-    
-    QTime day(QTime::currentTime());
+   
     _timer.setTimerType(Qt::VeryCoarseTimer);
-    _timer.setInterval(_timeD + day.msecsTo(QTime(7, 58, 00)));
     connect(&_timer, SIGNAL(timeout()), this, SLOT(dayUpdate()));
-    _timer.start();
+    
     this->dayUpdate();
 }
 
@@ -46,7 +44,12 @@ void MainClass::timerEvent(QTimerEvent *event)
 void MainClass::dayUpdate()
 {
     _timer.stop();
-    _timer.setInterval(_timeD);
+    
+    QTime day(QTime::currentTime());
+    long long msecs = day.msecsTo(QTime(7, 58, 00));
+    if (msecs <= 0) msecs += _timeD;
+    
+    _timer.setInterval(msecs);
     _timer.start();
     
     
