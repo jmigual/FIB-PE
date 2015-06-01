@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[a4paper, 12pt]{article}
 
 \usepackage[dvipsnames]{xcolor} % Code highlighting color
 \usepackage{fontspec} 
@@ -7,11 +7,11 @@
 \usepackage{import}
 \usepackage{listings} % Add code
 \usepackage{fullpage}
-%\usepackage[a4paper, margin=2cm]{geometry} % To change the margins
+\usepackage[a4paper, margin=2cm]{geometry} % To change the margins
 \usepackage{graphicx} % Insert images
 \usepackage{pdfpages}
 \usepackage{ragged2e}
-\usepackage{wrapfig} %To Text wrap
+\usepackage{wrapfig} %To Text wrap around figures
 
 \begin{document}
 
@@ -29,6 +29,10 @@ A la FIB és molt comú anar en busca d'una aula d'informàtica per tal de fer u
 
 \subsection{Objectiu}
 
-El nostre treball consisteix en analitzar la ocupació de les aules d'ordinadors de la \emph{Facultat d'Informàtica de Barcelona}. Volem saber 
+El nostre treball consisteix en analitzar la ocupació de les aules d'ordinadors de la \emph{Facultat d'Informàtica de Barcelona}. Volem saber quant ocupades estan les aules i com es distribueix aquesta ocupació al llarg dels dies de la setmana.
+
+La nostra hipòtesi és \emph{En les aules on hi ha classe la ocupació és menor que en les que hi ha classe}
+
+\input{Metodologia.tex}
 
 \end{document}

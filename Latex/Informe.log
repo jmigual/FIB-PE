@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99991 (MiKTeX 2.9) (preloaded format=xelatex 2015.2.25)  1 JUN 2015 10:22
+This is XeTeX, Version 3.14159265-2.6-0.99991 (MiKTeX 2.9) (preloaded format=xelatex 2015.2.25)  1 JUN 2015 10:44
 entering extended mode
 **Informe.tex
 (Informe.tex
@@ -6,8 +6,9 @@ LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 68 languages loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+Requested font "cmr12" at 12.0pt
 )
 \c@part=\count80
 \c@section=\count81
@@ -573,6 +574,22 @@ Package: listings 2014/09/06 1.5e (Carsten Heinz)
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip50
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count142
+\Gm@cntv=\count143
+\c@Gm@tempcnt=\count144
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
+\Gm@dimlist=\toks18
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\xelatex\xetexconfig\geometry.cfg"))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
 Package: pdfpages 2015/05/11 v0.4x Insert pages of external PDF documents (AM)
 
@@ -581,29 +598,29 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count142
-\calc@Bcount=\count143
-\calc@Adimen=\dimen151
-\calc@Bdimen=\dimen152
+\calc@Acount=\count145
+\calc@Bcount=\count146
+\calc@Adimen=\dimen159
+\calc@Bdimen=\dimen160
 \calc@Askip=\skip51
 \calc@Bskip=\skip52
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count144
+\calc@Ccount=\count147
 \calc@Cskip=\skip53
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
 Package: eso-pic 2015/04/20 v2.0e eso-pic (RN)
 )
-\AM@pagewidth=\dimen153
-\AM@pageheight=\dimen154
+\AM@pagewidth=\dimen161
+\AM@pageheight=\dimen162
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdfpages\ppxetex.def"
 File: ppxetex.def 2015/05/11 v0.4x Pdfpages driver for XeTeX (AM)
 )
 \AM@pagebox=\box44
-\AM@toc@title=\toks18
-\c@AM@survey=\count145
+\AM@toc@title=\toks19
+\c@AM@survey=\count148
 \AM@templatesizebox=\box45
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
@@ -628,11 +645,11 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \JustifyingParindent=\skip67
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
-\wrapoverhang=\dimen155
-\WF@size=\dimen156
-\c@WF@wrappedlines=\count146
+\wrapoverhang=\dimen163
+\WF@size=\dimen164
+\c@WF@wrappedlines=\count149
 \WF@box=\box46
-\WF@everypar=\toks19
+\WF@everypar=\toks20
 Package: wrapfig 2003/01/31  v 3.6
 )
 (Informe.aux)
@@ -660,6 +677,9 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
+Requested font "[lmroman12-regular]:mapping=tex-text" at 12.0pt
+ -> C:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/public/lm/lmroman12-regula
+r.otf
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -727,7 +747,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count147
+\c@section@level=\count150
 )
 LaTeX Info: Redefining \ref on input line 16.
 LaTeX Info: Redefining \pageref on input line 16.
@@ -737,15 +757,77 @@ LaTeX Info: Redefining \nameref on input line 16.
 \@outlinefile=\write3
 LaTeX Info: Redefining \l on input line 16.
 LaTeX Info: Redefining \L on input line 16.
-\c@lstlisting=\count148
- ABD: EverySelectfont initializing macros
+\c@lstlisting=\count151
+
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-15.36449pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 16.
+Requested font "[lmroman17-regular]:mapping=tex-text" at 20.74pt
+ -> C:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/public/lm/lmroman17-regula
+r.otf
+Requested font "[lmroman12-regular]:mapping=tex-text" at 14.4pt
+ -> C:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/public/lm/lmroman12-regula
+r.otf
+Requested font "[lmroman7-regular]:mapping=tex-text" at 7.0pt
+ -> C:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/public/lm/lmroman7-regular
+.otf
+Requested font "cmmi12" at 14.4pt
+Requested font "cmsy10" at 14.4pt
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 22.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 22.
+Requested font "cmr12" at 14.4pt
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\se-ascii-print.def"
+File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
+
+)
+[1
+
+]
 Requested font "[lmroman17-regular]:mapping=tex-text" at 17.28pt
  -> C:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/public/lm/lmroman17-regula
 r.otf
-Requested font "[lmroman12-regular]:mapping=tex-text" at 12.0pt
- -> C:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/public/lm/lmroman12-regula
-r.otf
+Requested font "[lmroman12-bold]:mapping=tex-text" at 17.28pt
+ -> C:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/public/lm/lmroman12-bold.o
+tf
+ (Informe.toc
+Requested font "[lmroman12-bold]:mapping=tex-text" at 12.0pt
+ -> C:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/public/lm/lmroman12-bold.o
+tf
 Requested font "[lmroman8-regular]:mapping=tex-text" at 8.0pt
  -> C:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/public/lm/lmroman8-regular
 .otf
@@ -759,48 +841,37 @@ Requested font "cmsy10" at 12.0pt
 Requested font "cmsy8" at 8.0pt
 Requested font "cmsy6" at 6.0pt
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 22.
+(Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 22.
+(Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 22.
-Requested font "cmr12" at 12.0pt
+(Font)              <6> on input line 3.
 Requested font "cmr8" at 8.0pt
 Requested font "cmr6" at 6.0pt
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\se-ascii-print.def"
-File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
-
 )
-[1
-
-]
-Requested font "[lmroman12-regular]:mapping=tex-text" at 14.4pt
- -> C:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/public/lm/lmroman12-regula
-r.otf
+\tf@toc=\write4
+ [2]
 Requested font "[lmroman12-bold]:mapping=tex-text" at 14.4pt
  -> C:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/public/lm/lmroman12-bold.o
 tf
- (Informe.toc)
-\tf@toc=\write4
- [2]
-Requested font "[lmroman12-bold]:mapping=tex-text" at 12.0pt
- -> C:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/public/lm/lmroman12-bold.o
-tf
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
+Requested font "[lmroman12-italic]:mapping=tex-text" at 12.0pt
+ -> C:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/public/lm/lmroman12-italic
+.otf
+ (Metodologia.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
  [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
  (Informe.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 34.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 34.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 34.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 38.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 38.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 38.
  ) 
 Here is how much of TeX's memory you used:
- 23169 strings out of 428790
- 419364 string characters out of 3163801
- 469757 words of memory out of 3000000
- 26344 multiletter control sequences out of 15000+200000
- 6832 words of font info for 36 fonts, out of 3000000 for 9000
+ 23634 strings out of 428790
+ 426174 string characters out of 3163801
+ 486241 words of memory out of 3000000
+ 26793 multiletter control sequences out of 15000+200000
+ 7777 words of font info for 43 fonts, out of 3000000 for 9000
  1096 hyphenation exceptions out of 8191
  46i,6n,45p,10404b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
 
