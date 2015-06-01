@@ -25,7 +25,6 @@
 
 # Executables
 *.exe
-*.out
 *.app
 
 
@@ -116,7 +115,6 @@ sysinfo.txt
 *.mtc0
 *.nav
 *.nlo
-*.out
 *.pdfsync
 *.ps
 *.run.xml
