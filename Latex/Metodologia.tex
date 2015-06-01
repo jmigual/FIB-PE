@@ -5,21 +5,20 @@ Per a fer la recollida de dades, hem programat un servidor perquè es connecti a
 L'API del racó ens proporciona la informació següent:
 \begin{itemize}
 	\item L'horari de classes de cada aula.
-	\item El número d'ordinadors lliures per cada aula en l'instant en què es demana.
+	\item El nombre d'ordinadors lliures per cada aula en l'instant en què es demana.
 \end{itemize}
 
 \subsection{Variables d'estudi}
 Per tal de fer-nos una idea de com és l'ocupació de les aules, hem decidit treballar amb les variables següents:
 \begin{description}
-	\item[X] Variable dicotòmica: val 1 si hi ha classe en l'aula on està un cert ordinador i 0 si no n'hi ha.
-	\item[Y] Ocupació de les aules (ordinadors lliures/ordinadors totals).
-	\item[Z] Interval de temps en què hi ha menys d'un 5\% d'ordinadors que no estan sent utilitzats per ningú en un dia (minuts/dia).
+	
+	\item[X] = "nombre d'ordinadors situats en una aula on HI HA CLASSE que no estan utilitzats"/"nombre d'ordinadors situats en una aula on HI HA CLASSE"
+	\item[Y] = "nombre d'ordinadors situats en una aula on NO HI HA CLASSE que no estan utilitzats"/"nombre d'ordinadors situats en una aula on NO HI HA CLASSE
 \end{description}
 
-En funció de si a les aules hi ha classe o no (la variable binària \emph{X}), 
  
 \subsection{Anàlisi d'estadístics}
-El comportament de la variable \emph{Y} pot dependre de molts factors. Tot seguit n'enumerem uns quants:
+El comportament de les variables \emph{X} o \emph{Y} pot dependre de molts factors. Tot seguit n'enumerem uns quants:
 \begin{description}
 	\item[Hora:] els hàbits rutinaris dels estudiants i els horaris de classe fan que en certes hores hi hagi més gent utilitzant els ordinadors.
 	\item[Ocupació de les aules per fer classe:] com més aules estiguin reservades per fer-hi classe, menys ordinadors lliures hi haurà pels estudiants que no tenen classe i en volen fer servir un.
