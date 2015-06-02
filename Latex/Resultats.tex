@@ -5,7 +5,7 @@
 
 \subsection{Anàlisi}
 \subsubsection{Comparació de l'ocupació d'aules on hi ha classe amb aules on no n'hi ha}
-L'objectiu d'aquest apartat és comparar el percentatge d'ocupació d'ordinadors en les aules on es fa classe i les aules on no se n'hi fa.
+
 
 Com a premisses fem les següents suposicions:
 \begin{enumerate}
@@ -24,24 +24,11 @@ Com a premisses fem les següents suposicions:
 \caption{}
 \end{minipage}
 \end{figure}
-
-Contrast d'hipòtesis:
-$$H0: \mu_x = \mu_y$$
-$$H1: \mu_x \neq \mu_y$$
-
-Estadístic utilitzat:
-$$\hat{z} = \frac{\bar{x} - \bar{y}}{\sqrt{s_x^2/n_x + s_y^2/n_y}} $$
-on: \\
-$\bar{x} = 0.77083$,
-$s^2_x = 0.01459139$,
-$n_x = 11934$ \\
-$\bar{y} = 0.8503347$,
-$s^2_y = 0.009507904$,
-$n_y = 11950$
-\\
+Analitzant les dades obtingudes hem arribat als següents valors:
+$$\bar{x} = 0.77083, s^2_x = 0.01459139, n_x = 11934$$
+$$\bar{y} = 0.8503347, s^2_y = 0.009507904, n_y = 11950$$
 I per tant:
 $$\hat{z} = -55.96263$$
-El valor de $\hat{z}$ és extremament petit. De fet, calculant el p-valor amb \emph{R} per aquesta $\hat{z}$ el resultat és 0. Per tant, queda clar que s'ha de rebutjar la hipòtesi nul·la. És més, degut a que $\hat{z}$ ha resultat ser negativa, podem afirmar que $Y>X$.
 
-%\subsubsection{Velocitat d'inici de les classes}
-%En aquest apartat volem aprofitar les dades que tenim per fer un petit estudi sobre
+
+El valor de $\hat{z}$ és extremament petit. De fet, calculant el p-valor amb \emph{R} per aquesta $\hat{z}$ el resultat és 0. Per tant, queda clar que s'ha de rebutjar la hipòtesi nul·la. És més, degut a que $\hat{z}$ ha resultat ser negativa, podem afirmar que $\mu_Y > \mu_X$.
