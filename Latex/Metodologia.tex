@@ -1,12 +1,15 @@
 \section{Metodologia}
 
 \subsection{Recollida de dades}
-Per a fer la recollida de dades, hem programat un servidor perquè es connecti a l'API de la FIB cada minut des del dimarts 5 de maig fins el divendres 29 del mateix mes i des de les 8 del matí fins a les 9 del vespre (horari d'obertura de la facultat). Degut a un error en l'execució del programa, entre els dies 5 i XX, només disposem de dades a partir de les  11:44.
+Per a fer la recollida de dades, hem programat un servidor perquè es connecti a l'API de la FIB cada minut des del dimarts 5 de maig fins el divendres 29 del mateix mes i des de les 8 del matí fins a les 9 del vespre (horari d'obertura de la facultat). 
 L'API del racó ens proporciona la informació següent:
 \begin{itemize}
 	\item L'horari de classes de cada aula.
 	\item El nombre d'ordinadors lliures per cada aula en l'instant en què es demana.
 \end{itemize}
+Les dades es troben en el següent enllaç:
+\url{https://docs.google.com/spreadsheets/d/1elGJjdaar26Jyu9gmvHlC1y-p9IX4dDBx0xu2t6Q0hw/pubhtml}
+
 
 \subsection{Variables d'estudi}
 Per tal de fer-nos una idea de com és la disponibilitat de les aules, hem decidit treballar amb les variables següents:
@@ -16,8 +19,8 @@ Per tal de fer-nos una idea de com és la disponibilitat de les aules, hem decid
 \end{description}
 
 \subsection{Contrast d'hipòtesis}
-$$H0: \mu_x = \mu_y$$
-$$H1: \mu_x \neq \mu_y$$
+$$H_0: \mu_x = \mu_y$$
+$$H_1: \mu_x \neq \mu_y$$
 
 \subsection{Premisses}
 \begin{enumerate}
@@ -27,6 +30,10 @@ $$H1: \mu_x \neq \mu_y$$
 
 \subsection{Estadístic utilitzat}
 $$\hat{z} = \frac{\bar{x} - \bar{y}}{\sqrt{s_x^2/n_x + s_y^2/n_y}} $$
-$$\hat{z} ~ N(0,1)$$
+$$\hat{z} \sim N(0,1)$$
+\centering
+Rebutjar si $|\hat{z}| > z_{1 - \alpha/2}$ amb $\alpha = 5\%$
+
+\flushleft
 
 
