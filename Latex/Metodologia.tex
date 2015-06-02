@@ -11,19 +11,17 @@ L'API del racó ens proporciona la informació següent:
 \subsection{Variables d'estudi}
 Per tal de fer-nos una idea de com és l'ocupació de les aules, hem decidit treballar amb les variables següents:
 \begin{description}
-	
-	\item[X] = "nombre d'ordinadors situats en una aula on HI HA CLASSE que no estan utilitzats"/"nombre d'ordinadors situats en una aula on HI HA CLASSE"
-	\item[Y] = "nombre d'ordinadors situats en una aula on NO HI HA CLASSE que no estan utilitzats"/"nombre d'ordinadors situats en una aula on NO HI HA CLASSE
+	\item[X] = proporció d'ordinadors lliures en les aules on \emph{hi ha classe}.
+	\item[Y] = proporció d'ordinadors lliures en les aules on \emph{no hi ha classe}.
 \end{description}
 
  
-\subsection{Anàlisi d'estadístics}
-El comportament de les variables \emph{X} o \emph{Y} pot dependre de molts factors. Tot seguit n'enumerem uns quants:
-\begin{description}
-	\item[Hora:] els hàbits rutinaris dels estudiants i els horaris de classe fan que en certes hores hi hagi més gent utilitzant els ordinadors.
-	\item[Ocupació de les aules per fer classe:] com més aules estiguin reservades per fer-hi classe, menys ordinadors lliures hi haurà pels estudiants que no tenen classe i en volen fer servir un.
-	\item[Exàmens:] els exàmens amb ordinador, a part d'ocupar moltes aules, poden provocar que hi hagi molts estudiants repassant a l'últim moment i que l'ocupació en les hores abans sigui anormalment alta.
-\end{description}
+\subsection{Contrast d'hipòtesis}
+$$H0: \mu_x = \mu_y$$
+$$H1: \mu_x \neq \mu_y$$
+
+\subsection{Estadístic utilitzat}
+$$\hat{z} = \frac{\bar{x} - \bar{y}}{\sqrt{s_x^2/n_x + s_y^2/n_y}} $$
 
 
 
