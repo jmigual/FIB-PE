@@ -2,7 +2,7 @@
 
 \usepackage[dvipsnames]{xcolor} % Code highlighting color
 \usepackage{fontspec} 
-\usepackage[hidelinks]{hyperref} % Links color
+\usepackage[hidelinks,breaklinks=true]{hyperref} % Links color
 \usepackage[catalan]{babel} % Language 
 \usepackage{import}
 \usepackage{listings} % Add code
@@ -28,7 +28,11 @@
 \newpage
 \section{Resum}
 
-\url{https://github.com/jmigual/peFIB}
+
+L'objectiu d'aquest treball és comparar la disponibilitat d'ordinadors entre aules de la FIB on hi ha classe i aules on no n'hi ha i comprovar si és cert que hi ha més ordinadors lliures en proporció a les aules on hi ha classe.
+La metodologia seguida és la recol·lecció de dades mitjançant un servidor i accedint a l'API de la FIB i la comparació de les mitjanes de les proporcions d'ordinadors no ocupats en aules on hi ha classe i aules on no partint de la hipòtesi nul·la que aquestes mitjanes són iguals.
+El resultat, comparant el p-valor és que la hipòtesi nul·la és falsa perquè la proporció mitjana d'ordinadors lliures en aules on no hi ha classe és menor.
+A partir d'aquest resultat arribem a la conclusió que la hipòtesi inicial era falsa i ho atribuïm al fet que hi ha moltes hores en què hi ha poca gent a la universitat i hi ha molt poques classes.
 
 \section{Introducció}
 
